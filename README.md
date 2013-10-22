@@ -46,6 +46,10 @@ s3signedurl -u "http://s3.amazonaws.com/codinghorrorimg/codinghorror-bandwidth-u
 s3signedurl -f path/to/file.txt -e "3 days" -o path/to/output.txt
 ```
 
+## Changelog
+
+See the [changelog](CHANGELOG.md) file.
+
 
 ## Contributing
 
