@@ -4,17 +4,9 @@ Generates signed urls for S3 objects.
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-    gem 's3-signed-url'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install s3-signed-url
+```bash
+$ gem install s3-signed-url
+```
 
 ## Usage
 
@@ -49,6 +41,13 @@ s3signedurl -f path/to/file.txt -e "3 days" -o path/to/output.txt
 ## Changelog
 
 See the [changelog](CHANGELOG.md) file.
+
+## TODO
+
+- [ ] Allow direct entry of AWS key and secret via command line params
+- [ ] Support batch signing urls with input file and output files
+- [ ] Add -b and -p functionality
+- [ ] Add download command generation
 
 
 ## Contributing
