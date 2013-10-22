@@ -22,11 +22,11 @@ Or install it yourself as:
 
 This gem uses aws-creds to supply the AWS credentials. See http://rubydoc.info/gems/aws-creds
 
-It expects a file ~/.awscreds with the format (chmod it to 0600 or similar)
+It expects a file `~/.awscreds` with the format (chmod it to 0600 or similar)
 
 ```
 default:AKIAIOSFODNNDEADBEEF:WT8ftNba7siVx5UOoGzJSyd82uNCZAC8LCllzcWp
-admin:AKIAIOO432MG8BADF00D:T60q14wrbyxl3Ed13VOFA/2G+nvJR/jgHC42jIH1
+s3user:AKIAIOO432MG8BADF00D:T60q14wrbyxl3Ed13VOFA/2G+nvJR/jgHC42jIH1
 ```
 
 ### Command Line Usage
@@ -36,14 +36,14 @@ admin:AKIAIOO432MG8BADF00D:T60q14wrbyxl3Ed13VOFA/2G+nvJR/jgHC42jIH1
 # sign a single url using the default profile
 s3signedurl -u "http://s3.amazonaws.com/codinghorrorimg/codinghorror-bandwidth-usage.png"
 
-# sign a single url
-s3signedurl sign -b <bucket> -p <path> -e "1 day" -c s3user -x CURL
+# sign a single url based on a path and bucket and generate a CURL command to download
+s3signedurl -b <bucket> -p <path> -e "1 day" -c s3user -x CURL
 
 # sign a single url based on s3.amazonaws.com prefix.
-s3signedurl sign -u "http://s3.amazonaws.com/codinghorrorimg/codinghorror-bandwidth-usage.png" -e "1 week"
+s3signedurl -u "http://s3.amazonaws.com/codinghorrorimg/codinghorror-bandwidth-usage.png" -e "1 week"
 
 # sign urls listed in a file, one per line, and output to another file.
-s3signedurl sign -f path/to/file.txt -e "3 days" -o path/to/output.txt
+s3signedurl -f path/to/file.txt -e "3 days" -o path/to/output.txt
 ```
 
 
