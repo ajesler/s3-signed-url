@@ -42,7 +42,7 @@ s3signedurl -f path/to/file.txt -e "3 days" -o path/to/output.txt
 
 See the [changelog](CHANGELOG.md) file.
 
-## TODO
+## Roadmap
 
 - [ ] Allow direct entry of AWS key and secret via command line params
 - [ ] Support batch signing urls with input file and output files
